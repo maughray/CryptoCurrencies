@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085562FCB6122847F1B55136 /* Pods_Crypto_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48EC18204572FE4774DFA78 /* Pods_Crypto_Challenge.framework */; };
 		959F84412791E80500892B78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959F84402791E80500892B78 /* AppDelegate.swift */; };
 		959F844A2791E80600892B78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959F84492791E80600892B78 /* Assets.xcassets */; };
 		959F844D2791E80600892B78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959F844B2791E80600892B78 /* LaunchScreen.storyboard */; };
@@ -14,6 +15,9 @@
 		959F84582791E95A00892B78 /* CryptoAPI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 959F84552791E93C00892B78 /* CryptoAPI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		959F84652791EB4B00892B78 /* CryptoCurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959F84642791EB4B00892B78 /* CryptoCurrenciesViewController.swift */; };
 		959F84682791EC6000892B78 /* CryptoCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959F84672791EC6000892B78 /* CryptoCurrencyCell.swift */; };
+		B2D697B327930AAA00907B28 /* NSMutableAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */; };
+		B2D697BA2793101300907B28 /* CryptoCurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */; };
+		B2D697BE2793104800907B28 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697BD2793104800907B28 /* CryptoCurrency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A235C1BC4D3121CE5A72079 /* Pods-Crypto Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypto Challenge.release.xcconfig"; path = "Target Support Files/Pods-Crypto Challenge/Pods-Crypto Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		959F843D2791E80500892B78 /* Crypto Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		959F84402791E80500892B78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959F84492791E80600892B78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +44,11 @@
 		959F84552791E93C00892B78 /* CryptoAPI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CryptoAPI.xcframework; sourceTree = "<group>"; };
 		959F84642791EB4B00892B78 /* CryptoCurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrenciesViewController.swift; sourceTree = "<group>"; };
 		959F84672791EC6000892B78 /* CryptoCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyCell.swift; sourceTree = "<group>"; };
+		A48EC18204572FE4774DFA78 /* Pods_Crypto_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crypto_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extensions.swift"; sourceTree = "<group>"; };
+		B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoCurrenciesViewModel.swift; path = "Crypto Challenge/Modules/CryptoCurrencies/ViewModel/CryptoCurrenciesViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		B2D697BD2793104800907B28 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
+		F02DD1D84ED709237EA4E055 /* Pods-Crypto Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypto Challenge.debug.xcconfig"; path = "Target Support Files/Pods-Crypto Challenge/Pods-Crypto Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				959F84572791E95A00892B78 /* CryptoAPI.xcframework in Frameworks */,
+				085562FCB6122847F1B55136 /* Pods_Crypto_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +70,7 @@
 				959F843F2791E80500892B78 /* Crypto Challenge */,
 				959F84542791E90900892B78 /* Frameworks */,
 				959F843E2791E80500892B78 /* Products */,
+				CBE30BFD0FD01180D4F9D04A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +87,7 @@
 			children = (
 				959F845A2791E9ED00892B78 /* App */,
 				959F845B2791EA0300892B78 /* Resources */,
+				B2D697AF27930A8D00907B28 /* Common */,
 				959F845C2791EA4600892B78 /* Modules */,
 			);
 			path = "Crypto Challenge";
@@ -84,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				959F84552791E93C00892B78 /* CryptoAPI.xcframework */,
+				A48EC18204572FE4774DFA78 /* Pods_Crypto_Challenge.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -110,6 +124,7 @@
 			children = (
 				959F84612791EAFA00892B78 /* LaunchScreen */,
 				959F845D2791EA4D00892B78 /* CryptoCurrencies */,
+				B2D697B427930EDC00907B28 /* CurrencyDetails */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -117,18 +132,11 @@
 		959F845D2791EA4D00892B78 /* CryptoCurrencies */ = {
 			isa = PBXGroup;
 			children = (
-				959F845E2791EACC00892B78 /* Model */,
+				B2D697BC2793103700907B28 /* Model */,
 				959F845F2791EAD300892B78 /* View */,
-				959F84602791EAD800892B78 /* ViewModel */,
+				B2D697BB2793102100907B28 /* ViewModel */,
 			);
 			path = CryptoCurrencies;
-			sourceTree = "<group>";
-		};
-		959F845E2791EACC00892B78 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		959F845F2791EAD300892B78 /* View */ = {
@@ -138,13 +146,6 @@
 				959F84662791EC3F00892B78 /* Cells */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		959F84602791EAD800892B78 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		959F84612791EAFA00892B78 /* LaunchScreen */ = {
@@ -163,6 +164,86 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		B2D697AF27930A8D00907B28 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B2D697B827930F6400907B28 /* Data */,
+				B2D697B027930A9200907B28 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B2D697B027930A9200907B28 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B2D697B427930EDC00907B28 /* CurrencyDetails */ = {
+			isa = PBXGroup;
+			children = (
+				B2D697B727930F4E00907B28 /* Model */,
+				B2D697B627930F4C00907B28 /* View */,
+				B2D697B527930F4A00907B28 /* ViewModel */,
+			);
+			path = CurrencyDetails;
+			sourceTree = "<group>";
+		};
+		B2D697B527930F4A00907B28 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B2D697B627930F4C00907B28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2D697B727930F4E00907B28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B2D697B827930F6400907B28 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B2D697BB2793102100907B28 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B2D697BC2793103700907B28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2D697BD2793104800907B28 /* CryptoCurrency.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CBE30BFD0FD01180D4F9D04A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F02DD1D84ED709237EA4E055 /* Pods-Crypto Challenge.debug.xcconfig */,
+				0A235C1BC4D3121CE5A72079 /* Pods-Crypto Challenge.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,10 +251,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 959F84512791E80600892B78 /* Build configuration list for PBXNativeTarget "Crypto Challenge" */;
 			buildPhases = (
+				7F8591055635F1F72B198398 /* [CP] Check Pods Manifest.lock */,
 				959F84392791E80500892B78 /* Sources */,
 				959F843A2791E80500892B78 /* Frameworks */,
 				959F843B2791E80500892B78 /* Resources */,
 				959F84592791E95A00892B78 /* Embed Frameworks */,
+				8883DFB3039F7CAB15FBF651 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,13 +312,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7F8591055635F1F72B198398 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Crypto Challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8883DFB3039F7CAB15FBF651 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Crypto Challenge/Pods-Crypto Challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Crypto Challenge/Pods-Crypto Challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Crypto Challenge/Pods-Crypto Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		959F84392791E80500892B78 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2D697BA2793101300907B28 /* CryptoCurrenciesViewModel.swift in Sources */,
+				B2D697BE2793104800907B28 /* CryptoCurrency.swift in Sources */,
 				959F84652791EB4B00892B78 /* CryptoCurrenciesViewController.swift in Sources */,
 				959F84682791EC6000892B78 /* CryptoCurrencyCell.swift in Sources */,
+				B2D697B327930AAA00907B28 /* NSMutableAttributedString+Extensions.swift in Sources */,
 				959F84412791E80500892B78 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +500,7 @@
 		};
 		959F84522791E80600892B78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F02DD1D84ED709237EA4E055 /* Pods-Crypto Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -381,11 +510,10 @@
 				INFOPLIST_FILE = "Crypto Challenge/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = CrytoCurrencies;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -401,6 +529,7 @@
 		};
 		959F84532791E80600892B78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A235C1BC4D3121CE5A72079 /* Pods-Crypto Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -410,11 +539,10 @@
 				INFOPLIST_FILE = "Crypto Challenge/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = CrytoCurrencies;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
