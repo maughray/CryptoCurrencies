@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let rootView = CryptoCurrenciesViewController()
         let rootController = UINavigationController(rootViewController: rootView)
-        rootController.navigationBar.isHidden = true
 
         window?.rootViewController = rootController
         window?.makeKeyAndVisible()

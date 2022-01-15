@@ -20,6 +20,7 @@
 		B24505E42793689F00686D91 /* CryptoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505E32793689F00686D91 /* CryptoService.swift */; };
 		B24505E6279369C800686D91 /* CurrencyPriceUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505E5279369C800686D91 /* CurrencyPriceUpdate.swift */; };
 		B24505E92793706E00686D91 /* default.realm in Resources */ = {isa = PBXBuildFile; fileRef = B24505E827936F9800686D91 /* default.realm */; };
+		B24505EB2793748700686D91 /* CurrencyDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505EA2793748700686D91 /* CurrencyDetailsViewModel.swift */; };
 		B2D697B327930AAA00907B28 /* NSMutableAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */; };
 		B2D697BA2793101300907B28 /* CryptoCurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */; };
 		B2D697BE2793104800907B28 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697BD2793104800907B28 /* CryptoCurrency.swift */; };
@@ -59,6 +60,7 @@
 		B24505E32793689F00686D91 /* CryptoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoService.swift; sourceTree = "<group>"; };
 		B24505E5279369C800686D91 /* CurrencyPriceUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPriceUpdate.swift; sourceTree = "<group>"; };
 		B24505E827936F9800686D91 /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
+		B24505EA2793748700686D91 /* CurrencyDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsViewModel.swift; sourceTree = "<group>"; };
 		B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 		B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoCurrenciesViewModel.swift; path = "Crypto Challenge/Modules/CryptoCurrencies/ViewModel/CryptoCurrenciesViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		B2D697BD2793104800907B28 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 		B2D697B527930F4A00907B28 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B24505EA2793748700686D91 /* CurrencyDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				959F84682791EC6000892B78 /* CryptoCurrencyCell.swift in Sources */,
 				B24505DE2793672B00686D91 /* AppDelegate+Injection.swift in Sources */,
 				B24505E22793688C00686D91 /* MockCryptoService.swift in Sources */,
+				B24505EB2793748700686D91 /* CurrencyDetailsViewModel.swift in Sources */,
 				B24505E6279369C800686D91 /* CurrencyPriceUpdate.swift in Sources */,
 				B2D697C42793256400907B28 /* RealmDatabase.swift in Sources */,
 				B2D697C7279325FE00907B28 /* DatabaseService.swift in Sources */,

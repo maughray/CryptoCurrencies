@@ -22,17 +22,12 @@ class CryptoCurrencyCell: UITableViewCell {
     func setup(viewModel: CryptoCurrencyCellViewModel) {
         setupUI()
         
-        coinImageView.image = UIImage(named: viewModel.imageName)
-        coinNameLabel.text = viewModel.name
-        coinCodeLabel.text = viewModel.code
-        
+        coinImageView.image = UIImage(named: viewModel.currency.imageName)
+        coinNameLabel.text = viewModel.currency.name
+        coinCodeLabel.text = viewModel.currency.code
         minPriceLabel.attributedText = viewModel.minPriceAttributedString
         maxPriceLabel.attributedText = viewModel.maxPriceAttributedString
-        setCurrentPrice(value: viewModel.currentPrice)
-    }
-    
-    private func setCurrentPrice(value: Float) {
-        currentPriceLabel.text = " $\(value) "
+        currentPriceLabel.text = viewModel.currentPrice
     }
 }
 

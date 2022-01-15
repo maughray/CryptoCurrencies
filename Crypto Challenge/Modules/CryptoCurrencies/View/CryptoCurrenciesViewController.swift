@@ -19,6 +19,11 @@ class CryptoCurrenciesViewController: UIViewController {
         super.loadView()
         setupUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
 }
 
 // MARK: - Setup UI
@@ -44,6 +49,7 @@ extension CryptoCurrenciesViewController {
     private func setupTableView() {
         tableView.register(CryptoCurrencyCell.self, forCellReuseIdentifier: CryptoCurrencyCell.identifier)
         tableView.dataSource = self
+        tableView.delegate = self
         view.addSubview(tableView)
         
         tableView.snp.makeConstraints { make in
@@ -55,6 +61,7 @@ extension CryptoCurrenciesViewController {
     }
 }
 
+// MARK: - TableView dataSource
 extension CryptoCurrenciesViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,5 +76,17 @@ extension CryptoCurrenciesViewController: UITableViewDataSource {
         let cellViewModel = viewModel.currencyCellsViewModels[indexPath.row]
         cell?.setup(viewModel: cellViewModel)
         return cell ?? UITableViewCell()
+    }
+}
+
+// MARK: - TableView delegate
+extension CryptoCurrenciesViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currency = viewModel.currencyCellsViewModels[indexPath.row].currency
+        let detailsViewModel = CurrencyDetailsViewModel(currency: currency)
+        let detailsVc = CurrencyDetailsViewController(viewModel: detailsViewModel)
+        navigationController?.pushViewController(detailsVc, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
