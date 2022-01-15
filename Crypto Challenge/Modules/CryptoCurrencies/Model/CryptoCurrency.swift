@@ -6,15 +6,15 @@
 //
 
 import Foundation
+import RealmSwift
 
-class CryptoCurrency {
-    var name: String
-    var imageUrl: String
-    var price: Float
+class CryptoCurrency: Object {
+    @objc dynamic var name: String = ""
+    @objc dynamic var code: String = ""
+    @objc dynamic var imageName: String = ""
+    var prices = List<CurrencyPrice>()
     
-    init(name: String, imageUrl: String, price: Float) {
-        self.name = name
-        self.imageUrl = imageUrl
-        self.price = price
+    static override func primaryKey() -> String? {
+        return "code"
     }
 }

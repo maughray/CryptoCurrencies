@@ -6,19 +6,26 @@
 //
 
 import Foundation
+import Resolver
 
 class CryptoCurrenciesViewModel {
     
     private(set) lazy var currencyCellsViewModels = [CryptoCurrencyCellViewModel]()
     
+    @LazyInjected private var databaseService: DatabaseService
+    @LazyInjected private var cryptoService: CryptoService
+    
     init() {
-        currencyCellsViewModels.append(contentsOf: [
-            CryptoCurrencyCellViewModel(
-                name: "Bitcoin",
-                code: "BTC",
-                currentPrice: 42655,
-                minPrice: 55,
-                maxPrice: 45888)
-        ])
+        let currencies = databaseService.fetch(CryptoCurrency.self, filter: nil)
+        currencyCellsViewModels = currencies.map { CryptoCurrencyCellViewModel(currency: $0) }
+        cryptoService.delegate = self
+    }
+}
+
+// MARK: - Crypto service delegate
+extension CryptoCurrenciesViewModel: CryptoServiceDelegate {
+    
+    func cryptoService(didReceivePriceUpdate currency: CryptoCurrency) {
+        
     }
 }

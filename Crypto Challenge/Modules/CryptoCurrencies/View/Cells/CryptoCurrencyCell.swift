@@ -21,6 +21,8 @@ class CryptoCurrencyCell: UITableViewCell {
     
     func setup(viewModel: CryptoCurrencyCellViewModel) {
         setupUI()
+        
+        coinImageView.image = UIImage(named: viewModel.imageName)
         coinNameLabel.text = viewModel.name
         coinCodeLabel.text = viewModel.code
         
@@ -47,13 +49,13 @@ extension CryptoCurrencyCell {
     }
     
     private func setupCoinImageView() {
-        coinImageView.backgroundColor = .red
         contentView.addSubview(coinImageView)
         coinImageView.snp.makeConstraints { make in
             make.left.equalTo(contentView).offset(15)
-            make.top.equalTo(contentView).offset(5)
+            make.top.equalTo(contentView).offset(10)
+            make.height.equalTo(40)
             make.width.equalTo(coinImageView.snp.height)
-            make.bottom.equalTo(contentView.snp.bottom).offset(-5)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-10)
         }
     }
     
@@ -62,7 +64,7 @@ extension CryptoCurrencyCell {
         
         coinNameLabel.snp.makeConstraints { make in
             make.left.equalTo(coinImageView.snp.right).offset(10)
-            make.top.equalTo(contentView).offset(5)
+            make.top.equalTo(contentView).offset(10)
         }
     }
     
@@ -81,7 +83,7 @@ extension CryptoCurrencyCell {
         contentView.addSubview(minPriceLabel)
         
         minPriceLabel.snp.makeConstraints { make in
-            make.top.equalTo(coinNameLabel.snp.bottom).offset(5)
+            make.top.equalTo(coinNameLabel.snp.bottom).offset(10)
             make.left.equalTo(coinImageView.snp.right).offset(10)
             make.bottom.equalTo(contentView).offset(-5)
         }
@@ -89,7 +91,6 @@ extension CryptoCurrencyCell {
     
     private func setupMaxPriceLabel() {
         contentView.addSubview(maxPriceLabel)
-        
         maxPriceLabel.snp.makeConstraints { make in
             make.left.equalTo(minPriceLabel.snp.right).offset(15)
             make.centerY.equalTo(minPriceLabel)

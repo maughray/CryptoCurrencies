@@ -10,9 +10,21 @@ import Foundation
 struct CryptoCurrencyCellViewModel {
     var name: String
     var code: String
+    var imageName: String
     var currentPrice: Float
     var minPrice: Float
     var maxPrice: Float
+    
+    init(currency: CryptoCurrency) {
+        name = currency.name
+        code = currency.code
+        imageName = currency.imageName
+        currentPrice = currency.prices.last?.price ?? 0
+        minPrice = 0
+        maxPrice = 0
+        
+        // TODO: calculate mix & max prices
+    }
     
     var minPriceAttributedString: NSAttributedString {
         return getPriceAttributedString(value: minPrice, prefix: "min:")
