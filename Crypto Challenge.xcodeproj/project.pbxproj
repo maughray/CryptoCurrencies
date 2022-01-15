@@ -19,6 +19,9 @@
 		B2D697BA2793101300907B28 /* CryptoCurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */; };
 		B2D697BE2793104800907B28 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697BD2793104800907B28 /* CryptoCurrency.swift */; };
 		B2D697C02793213F00907B28 /* CryptoCurrencyCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697BF2793213F00907B28 /* CryptoCurrencyCellViewModel.swift */; };
+		B2D697C2279324E000907B28 /* CurrencyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697C1279324E000907B28 /* CurrencyDetailsViewController.swift */; };
+		B2D697C42793256400907B28 /* RealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697C32793256400907B28 /* RealmDatabase.swift */; };
+		B2D697C7279325FE00907B28 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697C6279325FE00907B28 /* DatabaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +53,9 @@
 		B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoCurrenciesViewModel.swift; path = "Crypto Challenge/Modules/CryptoCurrencies/ViewModel/CryptoCurrenciesViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		B2D697BD2793104800907B28 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
 		B2D697BF2793213F00907B28 /* CryptoCurrencyCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyCellViewModel.swift; sourceTree = "<group>"; };
+		B2D697C1279324E000907B28 /* CurrencyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsViewController.swift; sourceTree = "<group>"; };
+		B2D697C32793256400907B28 /* RealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabase.swift; sourceTree = "<group>"; };
+		B2D697C6279325FE00907B28 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		F02DD1D84ED709237EA4E055 /* Pods-Crypto Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypto Challenge.debug.xcconfig"; path = "Target Support Files/Pods-Crypto Challenge/Pods-Crypto Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +209,7 @@
 		B2D697B627930F4C00907B28 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B2D697C1279324E000907B28 /* CurrencyDetailsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +224,8 @@
 		B2D697B827930F6400907B28 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B2D697C82793260100907B28 /* Realm */,
+				B2D697C5279325F100907B28 /* Protocols */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -236,6 +245,22 @@
 				B2D697BD2793104800907B28 /* CryptoCurrency.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B2D697C5279325F100907B28 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B2D697C6279325FE00907B28 /* DatabaseService.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B2D697C82793260100907B28 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				B2D697C32793256400907B28 /* RealmDatabase.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		CBE30BFD0FD01180D4F9D04A /* Pods */ = {
@@ -367,7 +392,10 @@
 				959F84652791EB4B00892B78 /* CryptoCurrenciesViewController.swift in Sources */,
 				B2D697C02793213F00907B28 /* CryptoCurrencyCellViewModel.swift in Sources */,
 				959F84682791EC6000892B78 /* CryptoCurrencyCell.swift in Sources */,
+				B2D697C42793256400907B28 /* RealmDatabase.swift in Sources */,
+				B2D697C7279325FE00907B28 /* DatabaseService.swift in Sources */,
 				B2D697B327930AAA00907B28 /* NSMutableAttributedString+Extensions.swift in Sources */,
+				B2D697C2279324E000907B28 /* CurrencyDetailsViewController.swift in Sources */,
 				959F84412791E80500892B78 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
