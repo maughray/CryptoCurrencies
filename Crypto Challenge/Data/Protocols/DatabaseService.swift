@@ -11,4 +11,5 @@ protocol DatabaseService {
     func fetch<T: DBModel>(_ type: T.Type, filter: NSPredicate?) -> [T]
     func update(_ data: [DBModel])
     func delete<T: DBModel>(_ objects: [T])
+    func updateEntity(block: @escaping(() -> Void))
 }

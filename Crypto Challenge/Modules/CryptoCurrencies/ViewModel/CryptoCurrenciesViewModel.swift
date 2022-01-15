@@ -25,7 +25,18 @@ class CryptoCurrenciesViewModel {
 // MARK: - Crypto service delegate
 extension CryptoCurrenciesViewModel: CryptoServiceDelegate {
     
-    func cryptoService(didReceivePriceUpdate currency: CryptoCurrency) {
-        
+    func cryptoService(didReceivePriceUpdate code: String, price: Float) {
+        DispatchQueue.main.async {
+            guard let currency = self.currencyCellsViewModels.first(where: {$0.currency.code == code })?.currency else {
+                return
+            }
+            let priceUpdate = CurrencyPrice()
+            priceUpdate.timestamp = Int64(Date().timeIntervalSince1970)
+            priceUpdate.price = price
+            
+            self.databaseService.updateEntity {
+                currency.prices.append(priceUpdate)
+            }
+        }
     }
 }

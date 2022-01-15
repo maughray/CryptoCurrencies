@@ -57,4 +57,10 @@ final class RealmDatabase: DatabaseService {
             realm?.delete(objects)
         }
     }
+    
+    func updateEntity(block: @escaping (() -> Void)) {
+        DispatchQueue.main.async {
+            try? self.realm?.write(block)
+        }
+    }
 }

@@ -17,7 +17,7 @@ class CryptoCurrency: Object {
     static override func primaryKey() -> String? {
         return "code"
     }
-    
+
     var currentPrice: Float {
         return prices.last?.price ?? 0
     }

@@ -12,5 +12,5 @@ protocol CryptoService {
 }
 
 protocol CryptoServiceDelegate: AnyObject {
-    func cryptoService(didReceivePriceUpdate currency: CryptoCurrency)
+    func cryptoService(didReceivePriceUpdate code: String, price: Float)
 }
