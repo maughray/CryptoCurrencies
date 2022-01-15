@@ -19,36 +19,18 @@ class CryptoCurrencyCell: UITableViewCell {
     private lazy var maxPriceLabel = UILabel()
     private lazy var currentPriceLabel = UILabel()
     
-    func setup() {
+    func setup(viewModel: CryptoCurrencyCellViewModel) {
         setupUI()
-        coinNameLabel.text = "Bitcoin"
-        coinCodeLabel.text = "BTC"
+        coinNameLabel.text = viewModel.name
+        coinCodeLabel.text = viewModel.code
         
-        setMinPrice(value: 43556)
-        setMaxPrice(value: 46556)
-        setCurrentPrice(value: 44556)
+        minPriceLabel.attributedText = viewModel.minPriceAttributedString
+        maxPriceLabel.attributedText = viewModel.maxPriceAttributedString
+        setCurrentPrice(value: viewModel.currentPrice)
     }
     
     private func setCurrentPrice(value: Float) {
         currentPriceLabel.text = " $\(value) "
-    }
-    
-    private func setMinPrice(value: Float) {
-        setPrice(value: value, for: minPriceLabel, prefix: "min:")
-    }
-    
-    private func setMaxPrice(value: Float) {
-        setPrice(value: value, for: maxPriceLabel, prefix: "max:")
-    }
-    
-    private func setPrice(value: Float, for label: UILabel, prefix: String) {
-        let priceText = "$\(value)"
-        let attributed = NSMutableAttributedString(string: "\(prefix) \(priceText)")
-        attributed.setFont(.systemFont(ofSize: 10, weight: .light), forText: prefix)
-        attributed.setFont(.systemFont(ofSize: 12, weight: .regular), forText: priceText)
-        attributed.setColor(color: .lightGray, forText: prefix)
-        attributed.setColor(color: .black, forText: priceText)
-        label.attributedText = attributed
     }
 }
 

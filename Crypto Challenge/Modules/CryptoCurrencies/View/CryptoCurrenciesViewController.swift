@@ -10,6 +10,8 @@ import SnapKit
 
 class CryptoCurrenciesViewController: UIViewController {
     
+    private lazy var viewModel = CryptoCurrenciesViewModel()
+    
     private lazy var tableView = UITableView()
     private lazy var titleLabel = UILabel()
     
@@ -56,12 +58,16 @@ extension CryptoCurrenciesViewController {
 extension CryptoCurrenciesViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return viewModel.currencyCellsViewModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CryptoCurrencyCell.identifier, for: indexPath) as! CryptoCurrencyCell
-        cell.setup()
-        return cell
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: CryptoCurrencyCell.identifier,
+            for: indexPath) as? CryptoCurrencyCell
+        
+        let cellViewModel = viewModel.currencyCellsViewModels[indexPath.row]
+        cell?.setup(viewModel: cellViewModel)
+        return cell ?? UITableViewCell()
     }
 }
