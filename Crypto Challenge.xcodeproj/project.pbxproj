@@ -12,6 +12,8 @@
 		959F844D2791E80600892B78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959F844B2791E80600892B78 /* LaunchScreen.storyboard */; };
 		959F84572791E95A00892B78 /* CryptoAPI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959F84552791E93C00892B78 /* CryptoAPI.xcframework */; };
 		959F84582791E95A00892B78 /* CryptoAPI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 959F84552791E93C00892B78 /* CryptoAPI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		959F84652791EB4B00892B78 /* CryptoCurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959F84642791EB4B00892B78 /* CryptoCurrenciesViewController.swift */; };
+		959F84682791EC6000892B78 /* CryptoCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959F84672791EC6000892B78 /* CryptoCurrencyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,8 @@
 		959F844C2791E80600892B78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		959F844E2791E80600892B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		959F84552791E93C00892B78 /* CryptoAPI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CryptoAPI.xcframework; sourceTree = "<group>"; };
+		959F84642791EB4B00892B78 /* CryptoCurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrenciesViewController.swift; sourceTree = "<group>"; };
+		959F84672791EC6000892B78 /* CryptoCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 		959F845F2791EAD300892B78 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				959F84642791EB4B00892B78 /* CryptoCurrenciesViewController.swift */,
+				959F84662791EC3F00892B78 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,6 +153,14 @@
 				959F844B2791E80600892B78 /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		959F84662791EC3F00892B78 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				959F84672791EC6000892B78 /* CryptoCurrencyCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959F84652791EB4B00892B78 /* CryptoCurrenciesViewController.swift in Sources */,
+				959F84682791EC6000892B78 /* CryptoCurrencyCell.swift in Sources */,
 				959F84412791E80500892B78 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,7 +381,7 @@
 				INFOPLIST_FILE = "Crypto Challenge/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = CrytoCurrencies;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -394,7 +410,7 @@
 				INFOPLIST_FILE = "Crypto Challenge/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = CrytoCurrencies;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
