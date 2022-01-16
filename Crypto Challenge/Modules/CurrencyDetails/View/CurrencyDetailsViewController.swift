@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import SwiftCharts
 
 class CurrencyDetailsViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class CurrencyDetailsViewController: UIViewController {
     
     private lazy var titleLabel = UILabel()
     private lazy var currencyImageView = UIImageView()
+    private var chartView: CryptoChartView!
     
     init(viewModel: CurrencyDetailsViewModel) {
         self.viewModel = viewModel
@@ -26,7 +28,7 @@ class CurrencyDetailsViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        setupUI()
+        createSubviews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,13 +37,14 @@ class CurrencyDetailsViewController: UIViewController {
     }
 }
 
-// MARK: - Setup UI
+// MARK: - Create subviews
 extension CurrencyDetailsViewController {
     
-    private func setupUI() {
+    private func createSubviews() {
         view.backgroundColor = .white
         setupImageView()
         setupTitleLabel()
+        setupChartView()
     }
     
     private func setupImageView() {
@@ -64,6 +67,18 @@ extension CurrencyDetailsViewController {
         titleLabel.snp.makeConstraints { make in
             make.centerY.equalTo(currencyImageView)
             make.left.equalTo(currencyImageView.snp.right).offset(10)
+        }
+    }
+    
+    private func setupChartView() {
+        chartView = CryptoChartView(currency: viewModel.currency)
+        view.addSubview(chartView)
+        
+        chartView.snp.makeConstraints { make in
+            make.top.equalTo(currencyImageView.snp.bottom).offset(10)
+            make.left.equalTo(view.safeAreaLayoutGuide).offset(10)
+            make.right.equalTo(view.safeAreaLayoutGuide).offset(10)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(10)
         }
     }
 }

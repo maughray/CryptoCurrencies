@@ -21,6 +21,7 @@
 		B24505E6279369C800686D91 /* CurrencyPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505E5279369C800686D91 /* CurrencyPrice.swift */; };
 		B24505E92793706E00686D91 /* default.realm in Resources */ = {isa = PBXBuildFile; fileRef = B24505E827936F9800686D91 /* default.realm */; };
 		B24505EB2793748700686D91 /* CurrencyDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505EA2793748700686D91 /* CurrencyDetailsViewModel.swift */; };
+		B24505EE279423DB00686D91 /* CryptoChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505ED279423DB00686D91 /* CryptoChartView.swift */; };
 		B2D697B327930AAA00907B28 /* NSMutableAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */; };
 		B2D697BA2793101300907B28 /* CryptoCurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */; };
 		B2D697BE2793104800907B28 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697BD2793104800907B28 /* CryptoCurrency.swift */; };
@@ -61,6 +62,7 @@
 		B24505E5279369C800686D91 /* CurrencyPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPrice.swift; sourceTree = "<group>"; };
 		B24505E827936F9800686D91 /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
 		B24505EA2793748700686D91 /* CurrencyDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsViewModel.swift; sourceTree = "<group>"; };
+		B24505ED279423DB00686D91 /* CryptoChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoChartView.swift; sourceTree = "<group>"; };
 		B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 		B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoCurrenciesViewModel.swift; path = "Crypto Challenge/Modules/CryptoCurrencies/ViewModel/CryptoCurrenciesViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		B2D697BD2793104800907B28 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
@@ -211,6 +213,14 @@
 			path = Default;
 			sourceTree = "<group>";
 		};
+		B24505EC279423C400686D91 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				B24505ED279423DB00686D91 /* CryptoChartView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		B2D697AF27930A8D00907B28 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				B2D697C1279324E000907B28 /* CurrencyDetailsViewController.swift */,
+				B24505EC279423C400686D91 /* Subviews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -444,6 +455,7 @@
 				B2D697B327930AAA00907B28 /* NSMutableAttributedString+Extensions.swift in Sources */,
 				B24505E42793689F00686D91 /* CryptoService.swift in Sources */,
 				B2D697C2279324E000907B28 /* CurrencyDetailsViewController.swift in Sources */,
+				B24505EE279423DB00686D91 /* CryptoChartView.swift in Sources */,
 				959F84412791E80500892B78 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

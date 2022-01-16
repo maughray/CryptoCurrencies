@@ -17,7 +17,7 @@ class CryptoCurrenciesViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        setupUI()
+        createSubviews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,10 +26,10 @@ class CryptoCurrenciesViewController: UIViewController {
     }
 }
 
-// MARK: - Setup UI
+// MARK: - Create subviews
 extension CryptoCurrenciesViewController {
     
-    private func setupUI() {
+    private func createSubviews() {
         view.backgroundColor = .white
         setupTitleLabel()
         setupTableView()

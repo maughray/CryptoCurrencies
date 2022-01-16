@@ -20,7 +20,7 @@ class CryptoCurrencyCell: UITableViewCell {
     private lazy var currentPriceLabel = UILabel()
     
     func setup(viewModel: CryptoCurrencyCellViewModel) {
-        setupUI()
+        createSubviews()
         
         coinImageView.image = UIImage(named: viewModel.currency.imageName)
         coinNameLabel.text = viewModel.currency.name
@@ -34,7 +34,7 @@ class CryptoCurrencyCell: UITableViewCell {
 // MARK: - Setup UI
 extension CryptoCurrencyCell {
     
-    private func setupUI() {
+    private func createSubviews() {
         setupCoinImageView()
         setupCoinNameLabel()
         setupCoinCodeLabel()

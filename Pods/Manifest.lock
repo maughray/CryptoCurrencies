@@ -12,12 +12,14 @@ PODS:
   - Resolver (1.5.0)
   - SnapKit (5.0.1)
   - Sourcery (1.0.3)
+  - SwiftCharts (0.6.5)
 
 DEPENDENCIES:
   - PredicateFlow
   - RealmSwift
   - Resolver
   - SnapKit (~> 5.0.0)
+  - SwiftCharts
 
 SPEC REPOS:
   trunk:
@@ -27,6 +29,7 @@ SPEC REPOS:
     - Resolver
     - SnapKit
     - Sourcery
+    - SwiftCharts
 
 SPEC CHECKSUMS:
   PredicateFlow: 7aba88c0ec476efa651fbf652b494773856ab9a9
@@ -35,7 +38,8 @@ SPEC CHECKSUMS:
   Resolver: 68984624572763018fd8ec7b8e3e8df0e3b6bba5
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Sourcery: 70a6048014bd4f37ea80e6bd4354d47bf3b760e1
+  SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
 
-PODFILE CHECKSUM: 45e1fb4c0290d70bea433296927075828e988f7d
+PODFILE CHECKSUM: 7f66383e826e8adc5e194634b640472ee787fb8a
 
 COCOAPODS: 1.11.2
