@@ -8,8 +8,6 @@
 import Foundation
 
 protocol CryptoRepositoryProtocol {
-    var isConnected: Bool { get }
     var delegate: CryptoRepositoryDelegate? { get set }
-    
     func getCurrencies() -> [Currency]
 }

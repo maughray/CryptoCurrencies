@@ -11,7 +11,7 @@ import CryptoAPI
 class CryptoCurrencyCell: UITableViewCell {
     
     static let identifier = String(describing: CryptoCurrencyCell.self)
-    
+
     private lazy var coinImageView = UIImageView()
     private lazy var coinNameLabel = UILabel()
     private lazy var coinCodeLabel = UILabel()
@@ -19,8 +19,12 @@ class CryptoCurrencyCell: UITableViewCell {
     private lazy var maxPriceLabel = UILabel()
     private lazy var currentPriceLabel = UILabel()
     
+    private var viewModel: CryptoCurrencyCellViewModel!
+    
     func setup(viewModel: CryptoCurrencyCellViewModel) {
+        self.viewModel = viewModel
         createSubviews()
+        setupBindings()
         
         coinImageView.setImage(urlString: viewModel.currency.imageUrl)
         coinNameLabel.text = viewModel.currency.name
@@ -28,8 +32,38 @@ class CryptoCurrencyCell: UITableViewCell {
         minPriceLabel.attributedText = viewModel.minPriceAttributedString
         maxPriceLabel.attributedText = viewModel.maxPriceAttributedString
         currentPriceLabel.text = viewModel.currentPrice
-        
+    }
+}
 
+// MARK: - Bindings
+extension CryptoCurrencyCell {
+    
+    private func setupBindings() {
+        viewModel.onPriceDidChane = self.onPriceDidChange
+        viewModel.onMinPriceDidChange = self.onMinPriceDidChange
+        viewModel.onMaxPriceDidChange = self.onMaxPriceDidChange
+    }
+    
+    private func onPriceDidChange(color: UIColor) {
+        UIView.transition(
+            with: currentPriceLabel,
+            duration: 0.8,
+            options: .transitionCrossDissolve,
+            animations: {
+                self.currentPriceLabel.backgroundColor = color
+            },
+            completion: { _ in
+                self.currentPriceLabel.backgroundColor = .clear
+                self.currentPriceLabel.text = self.viewModel.currentPrice
+            })
+    }
+    
+    private func onMinPriceDidChange() {
+        minPriceLabel.attributedText = viewModel.minPriceAttributedString
+    }
+    
+    private func onMaxPriceDidChange() {
+        maxPriceLabel.attributedText = viewModel.maxPriceAttributedString
     }
 }
 
@@ -72,7 +106,7 @@ extension CryptoCurrencyCell {
         
         coinCodeLabel.snp.makeConstraints { make in
             make.left.equalTo(coinNameLabel.snp.right).offset(15)
-            make.top.equalTo(contentView).offset(5)
+            make.centerY.equalTo(coinNameLabel)
         }
     }
     
@@ -80,7 +114,6 @@ extension CryptoCurrencyCell {
         contentView.addSubview(minPriceLabel)
         
         minPriceLabel.snp.makeConstraints { make in
-            make.top.equalTo(coinNameLabel.snp.bottom).offset(10)
             make.left.equalTo(coinImageView.snp.right).offset(10)
             make.bottom.equalTo(contentView).offset(-5)
         }

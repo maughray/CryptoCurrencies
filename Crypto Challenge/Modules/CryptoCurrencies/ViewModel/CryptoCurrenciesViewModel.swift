@@ -16,9 +16,6 @@ class CryptoCurrenciesViewModel {
     
     // Bindings
     var onCurrenciesDidReload: (() -> Void)?
-    var onCurrencyDidUpdatePrice: ((Int, Double) -> Void)?
-    var onCurrencyDidUpdateMinPrice: ((Int, Double) -> Void)?
-    var onCurrencyDidUpdateMaxPrice: ((Int, Double) -> Void)?
     
     init() {
         reloadCurrencies()
@@ -30,21 +27,31 @@ class CryptoCurrenciesViewModel {
         currencyCellsViewModels = currencies.map { CryptoCurrencyCellViewModel(currency: $0) }
         onCurrenciesDidReload?()
     }
+    
+    private func getCellViewModel(coinCode: String) -> CryptoCurrencyCellViewModel? {
+        return currencyCellsViewModels.first(where: { $0.currency.code == coinCode })
+    }
 }
 
 // MARK: - Crypto service delegate
 extension CryptoCurrenciesViewModel: CryptoRepositoryDelegate {
     
     func cryptoRepository(didUpdateMinPrice coin: Currency) {
-        onCurrencyDidUpdateMinPrice?(0, coin.price)
+        DispatchQueue.main.async {
+            self.getCellViewModel(coinCode: coin.code)?.updateMinPrice(value: coin.minPrice)
+        }
     }
     
     func cryptoRepository(didUpdateMaxPrice coin: Currency) {
-        onCurrencyDidUpdateMaxPrice?(0, coin.price)
+        DispatchQueue.main.async {
+            self.getCellViewModel(coinCode: coin.code)?.updateMaxPrice(value: coin.maxPrice)
+        }
     }
     
     func cryptoRepository(didUpdatePrice coin: Currency) {
-        onCurrencyDidUpdatePrice?(0, coin.price)
+        DispatchQueue.main.async {
+            self.getCellViewModel(coinCode: coin.code)?.updatePrice(value: coin.price)
+        }
     }
     
     func cryptoRepositoryDidReloadCurrencies() {

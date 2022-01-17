@@ -32,25 +32,10 @@ extension CryptoCurrenciesViewController {
     
     private func setupBindings() {
         viewModel.onCurrenciesDidReload = self.onCurrenciesDidReload
-        viewModel.onCurrencyDidUpdatePrice = self.onCurrencyDidUpdatePrice
-        viewModel.onCurrencyDidUpdateMaxPrice = self.onCurrencyDidUpdateMaxPrice
-        viewModel.onCurrencyDidUpdateMinPrice = self.onCurrencyDidUpdateMinPrice
     }
     
     private func onCurrenciesDidReload() {
         tableView.reloadData()
-    }
-    
-    private func onCurrencyDidUpdatePrice(index: Int, value: Double) {
-        print("\(index) price update: \(value)")
-    }
-    
-    private func onCurrencyDidUpdateMaxPrice(index: Int, value: Double) {
-        print("\(index) max price update: \(value)")
-    }
-    
-    private func onCurrencyDidUpdateMinPrice(index: Int, value: Double) {
-        print("\(index) min price update: \(value)")
     }
 }
 
@@ -78,6 +63,7 @@ extension CryptoCurrenciesViewController {
         tableView.register(CryptoCurrencyCell.self, forCellReuseIdentifier: CryptoCurrencyCell.identifier)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorStyle = .singleLine
         view.addSubview(tableView)
         
         tableView.snp.makeConstraints { make in
@@ -103,6 +89,7 @@ extension CryptoCurrenciesViewController: UITableViewDataSource {
         
         let cellViewModel = viewModel.currencyCellsViewModels[indexPath.row]
         cell?.setup(viewModel: cellViewModel)
+        print("setup cell: \(cellViewModel.currency.name)")
         return cell ?? UITableViewCell()
     }
 }

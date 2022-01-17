@@ -12,15 +12,15 @@ class CryptoCurrencyCellViewModel {
     private(set) var currency: CryptoCurrency
     
     var minPriceAttributedString: NSAttributedString {
-        return getPriceAttributedString(value: currency.minPrice, prefix: "min:")
+        return getPriceAttributedString(value: currency.minPrice.priceFormatted, prefix: "min:")
     }
     
     var maxPriceAttributedString: NSAttributedString {
-        return getPriceAttributedString(value: currency.maxPrice, prefix: "max:")
+        return getPriceAttributedString(value: currency.maxPrice.priceFormatted, prefix: "max:")
     }
     
     var currentPrice: String {
-        return " $\(currency.price) "
+        return " $\(currency.price.priceFormatted) "
     }
     
     init(currency: CryptoCurrency) {
@@ -28,24 +28,32 @@ class CryptoCurrencyCellViewModel {
     }
     
     // Bindings
-    var onPriceDidChane: ((Double, UIColor) -> Void)?
-    var onMinPriceDidChange: ((Double) -> Void)?
+    var onPriceDidChane: ((UIColor) -> Void)?
+    var onMinPriceDidChange: (() -> Void)?
+    var onMaxPriceDidChange: (() -> Void)?
     
     func updatePrice(value: Double) {
-        currency.price = value
         var color = UIColor.clear
-        //if currency.
+        if currency.price < value {
+            color = .green
+        } else if currency.price > value {
+            color = .red
+        }
+        currency.price = value
+        onPriceDidChane?(color)
     }
     
     func updateMinPrice(value: Double) {
-        
+        currency.minPrice = value
+        onMinPriceDidChange?()
     }
     
     func updateMaxPrice(value: Double) {
-        
+        currency.maxPrice = value
+        onMaxPriceDidChange?()
     }
     
-    private func getPriceAttributedString(value: Double, prefix: String) -> NSAttributedString {
+    private func getPriceAttributedString(value: String, prefix: String) -> NSAttributedString {
         let priceText = "$\(value)"
         let attributed = NSMutableAttributedString(string: "\(prefix) \(priceText)")
         attributed.setFont(.systemFont(ofSize: 10, weight: .light), forText: prefix)
@@ -55,3 +63,5 @@ class CryptoCurrencyCellViewModel {
         return attributed
     }
 }
+
+

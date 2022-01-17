@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		085562FCB6122847F1B55136 /* Pods_Crypto_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48EC18204572FE4774DFA78 /* Pods_Crypto_Challenge.framework */; };
+		9518ECF02795D3F10060D24B /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518ECEF2795D3F10060D24B /* Date+Extensions.swift */; };
+		9518ECF4279618550060D24B /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518ECF3279618550060D24B /* Double+Extensions.swift */; };
 		959F84412791E80500892B78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959F84402791E80500892B78 /* AppDelegate.swift */; };
 		959F844A2791E80600892B78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959F84492791E80600892B78 /* Assets.xcassets */; };
 		959F844D2791E80600892B78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959F844B2791E80600892B78 /* LaunchScreen.storyboard */; };
@@ -17,6 +19,7 @@
 		959F84682791EC6000892B78 /* CryptoCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959F84672791EC6000892B78 /* CryptoCurrencyCell.swift */; };
 		95DB79A02795B7700025D287 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DB799F2795B7700025D287 /* UIImageView+Extensions.swift */; };
 		95DB79A32795C52C0025D287 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DB79A22795C52C0025D287 /* CryptoCurrency.swift */; };
+		95DB79A92795D00E0025D287 /* PredicateFlow.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DB79A82795D00E0025D287 /* PredicateFlow.generated.swift */; };
 		B24505DE2793672B00686D91 /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505DD2793672B00686D91 /* AppDelegate+Injection.swift */; };
 		B24505E22793688C00686D91 /* CryptoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505E12793688C00686D91 /* CryptoRepository.swift */; };
 		B24505E6279369C800686D91 /* CurrencyPriceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505E5279369C800686D91 /* CurrencyPriceEntity.swift */; };
@@ -25,10 +28,8 @@
 		B24505F1279562AA00686D91 /* CryptoRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505F0279562AA00686D91 /* CryptoRepositoryProtocol.swift */; };
 		B24505F3279562BE00686D91 /* CryptoRespotoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505F2279562BE00686D91 /* CryptoRespotoryDelegate.swift */; };
 		B24505F5279564E000686D91 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505F4279564E000686D91 /* Currency.swift */; };
-		B24505F82795653500686D91 /* Coin+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505F72795653500686D91 /* Coin+Extensions.swift */; };
 		B2D697B327930AAA00907B28 /* NSMutableAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */; };
 		B2D697BA2793101300907B28 /* CryptoCurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */; };
-		B2D697BE2793104800907B28 /* CryptoCurrencyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697BD2793104800907B28 /* CryptoCurrencyEntity.swift */; };
 		B2D697C02793213F00907B28 /* CryptoCurrencyCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697BF2793213F00907B28 /* CryptoCurrencyCellViewModel.swift */; };
 		B2D697C2279324E000907B28 /* CurrencyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697C1279324E000907B28 /* CurrencyDetailsViewController.swift */; };
 		B2D697C42793256400907B28 /* RealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697C32793256400907B28 /* RealmDatabase.swift */; };
@@ -51,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		0A235C1BC4D3121CE5A72079 /* Pods-Crypto Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypto Challenge.release.xcconfig"; path = "Target Support Files/Pods-Crypto Challenge/Pods-Crypto Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		9518ECEF2795D3F10060D24B /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		9518ECF3279618550060D24B /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		959F843D2791E80500892B78 /* Crypto Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		959F84402791E80500892B78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959F84492791E80600892B78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		959F84672791EC6000892B78 /* CryptoCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyCell.swift; sourceTree = "<group>"; };
 		95DB799F2795B7700025D287 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		95DB79A22795C52C0025D287 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
+		95DB79A82795D00E0025D287 /* PredicateFlow.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateFlow.generated.swift; sourceTree = SOURCE_ROOT; };
 		A48EC18204572FE4774DFA78 /* Pods_Crypto_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crypto_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24505DD2793672B00686D91 /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
 		B24505E12793688C00686D91 /* CryptoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRepository.swift; sourceTree = "<group>"; };
@@ -70,10 +74,8 @@
 		B24505F0279562AA00686D91 /* CryptoRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRepositoryProtocol.swift; sourceTree = "<group>"; };
 		B24505F2279562BE00686D91 /* CryptoRespotoryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRespotoryDelegate.swift; sourceTree = "<group>"; };
 		B24505F4279564E000686D91 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		B24505F72795653500686D91 /* Coin+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coin+Extensions.swift"; sourceTree = "<group>"; };
 		B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 		B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoCurrenciesViewModel.swift; path = "Crypto Challenge/Modules/CryptoCurrencies/ViewModel/CryptoCurrenciesViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		B2D697BD2793104800907B28 /* CryptoCurrencyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyEntity.swift; sourceTree = "<group>"; };
 		B2D697BF2793213F00907B28 /* CryptoCurrencyCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyCellViewModel.swift; sourceTree = "<group>"; };
 		B2D697C1279324E000907B28 /* CurrencyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsViewController.swift; sourceTree = "<group>"; };
 		B2D697C32793256400907B28 /* RealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabase.swift; sourceTree = "<group>"; };
@@ -94,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9518ECF82796287D0060D24B /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				B2D697C82793260100907B28 /* Realm */,
+				B2D697C5279325F100907B28 /* Protocols */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		959F84342791E80500892B78 = {
 			isa = PBXGroup;
 			children = (
@@ -199,18 +210,17 @@
 		95DB79A12795C4FC0025D287 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				B2D697BD2793104800907B28 /* CryptoCurrencyEntity.swift */,
 				B24505E5279369C800686D91 /* CurrencyPriceEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		B24505DF2793685A00686D91 /* Services */ = {
+		95DB79A72795CFE80025D287 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				B24505E02793686200686D91 /* Crypto Repository */,
+				95DB79A82795D00E0025D287 /* PredicateFlow.generated.swift */,
 			);
-			path = Services;
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		B24505E02793686200686D91 /* Crypto Repository */ = {
@@ -218,7 +228,6 @@
 			children = (
 				B24505E12793688C00686D91 /* CryptoRepository.swift */,
 				B24505EF279562A000686D91 /* Protocols */,
-				B24505F62795652700686D91 /* Extensions */,
 				95DB79A12795C4FC0025D287 /* Entities */,
 			);
 			path = "Crypto Repository";
@@ -242,19 +251,11 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		B24505F62795652700686D91 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B24505F72795653500686D91 /* Coin+Extensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		B2D697AF27930A8D00907B28 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				B24505DF2793685A00686D91 /* Services */,
 				B2D697B027930A9200907B28 /* Extensions */,
+				95DB79A72795CFE80025D287 /* Generated */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -264,6 +265,8 @@
 			children = (
 				B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */,
 				95DB799F2795B7700025D287 /* UIImageView+Extensions.swift */,
+				9518ECEF2795D3F10060D24B /* Date+Extensions.swift */,
+				9518ECF3279618550060D24B /* Double+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -305,8 +308,8 @@
 		B2D697B827930F6400907B28 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B2D697C82793260100907B28 /* Realm */,
-				B2D697C5279325F100907B28 /* Protocols */,
+				9518ECF82796287D0060D24B /* Database */,
+				B24505E02793686200686D91 /* Crypto Repository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -478,7 +481,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "\"$PODS_ROOT/Sourcery/bin/sourcery\" --sources \"$PODS_ROOT/PredicateFlow/PredicateFlow/Classes/Utils/\" --sources \"$SRCROOT\"  --sources \"$PODS_ROOT/RealmSwift\" --templates \"$PODS_ROOT/PredicateFlow/PredicateFlow/Templates/PredicateFlow-Realm.stencil\" --output \"$SRCROOT/PredicateFlow.generated.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -489,11 +492,10 @@
 			files = (
 				B24505F5279564E000686D91 /* Currency.swift in Sources */,
 				B2D697BA2793101300907B28 /* CryptoCurrenciesViewModel.swift in Sources */,
-				B2D697BE2793104800907B28 /* CryptoCurrencyEntity.swift in Sources */,
+				9518ECF02795D3F10060D24B /* Date+Extensions.swift in Sources */,
 				959F84652791EB4B00892B78 /* CryptoCurrenciesViewController.swift in Sources */,
 				B2D697C02793213F00907B28 /* CryptoCurrencyCellViewModel.swift in Sources */,
 				959F84682791EC6000892B78 /* CryptoCurrencyCell.swift in Sources */,
-				B24505F82795653500686D91 /* Coin+Extensions.swift in Sources */,
 				B24505F3279562BE00686D91 /* CryptoRespotoryDelegate.swift in Sources */,
 				B24505F1279562AA00686D91 /* CryptoRepositoryProtocol.swift in Sources */,
 				B24505DE2793672B00686D91 /* AppDelegate+Injection.swift in Sources */,
@@ -507,6 +509,8 @@
 				B2D697B327930AAA00907B28 /* NSMutableAttributedString+Extensions.swift in Sources */,
 				B2D697C2279324E000907B28 /* CurrencyDetailsViewController.swift in Sources */,
 				B24505EE279423DB00686D91 /* CryptoChartView.swift in Sources */,
+				95DB79A92795D00E0025D287 /* PredicateFlow.generated.swift in Sources */,
+				9518ECF4279618550060D24B /* Double+Extensions.swift in Sources */,
 				959F84412791E80500892B78 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

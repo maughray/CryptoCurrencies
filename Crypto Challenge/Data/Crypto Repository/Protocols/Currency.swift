@@ -8,10 +8,10 @@
 import Foundation
 
 protocol Currency {
-    var name: String { get }
-    var code: String { get }
+    var name: String { get set }
+    var code: String { get set }
     var price: Double { get set }
-    var imageUrl: String? { get }
+    var imageUrl: String? { get set }
     var maxPrice: Double { get set }
     var minPrice: Double { get set }
 }

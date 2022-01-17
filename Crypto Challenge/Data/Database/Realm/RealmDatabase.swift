@@ -32,21 +32,15 @@ final class RealmDatabase: DatabaseService {
         return Array(data)
     }
     
-    func update(_ data: [Object]) {
+    func add(_ data: [Object]) {
         try? realm?.write {
-            realm?.add(data, update: .modified)
+            realm?.add(data)
         }
     }
     
     func delete<T: Object>(_ objects: [T]) {
         try? realm?.write {
             realm?.delete(objects)
-        }
-    }
-    
-    func updateEntity(block: @escaping (() -> Void)) {
-        DispatchQueue.main.async {
-            try? self.realm?.write(block)
         }
     }
 }
