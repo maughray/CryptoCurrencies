@@ -16,13 +16,17 @@ class CryptoRepository: CryptoRepositoryProtocol {
     private lazy var cryptoApi = Crypto(delegate: self)
     
     private(set) var isConnected = false
-    private(set) lazy var coins = [CryptoCurrency]()
+    private(set) lazy var coins = [CryptoCurrencyEntity]()
     
     init(databaseService: DatabaseService) {
         self.databaseService = databaseService
         loadCoinsFromDatabase()
         let _ = cryptoApi.connect()
         setupObservers()
+    }
+    
+    func getCurrencies() -> [Currency] {
+        return coins.map { CryptoCurrency(currency: $0) }
     }
 }
 
@@ -35,17 +39,25 @@ extension CryptoRepository: CryptoDelegate {
     }
     
     func cryptoAPIDidUpdateCoin(_ coin: Coin) {
-        guard let storedCoin = self.coin(code: coin.code) else {
-            return
+        DispatchQueue.main.async { [weak self] in
+            guard
+                let self = self,
+                let storedCoin = self.coin(code: coin.code)
+            else {
+                return
+            }
+            if storedCoin.minPrice > coin.price {
+                self.onMinPriceDidChange(value: coin.price, coin: storedCoin)
+            }
+            else if storedCoin.maxPrice < coin.price {
+                self.onMaxPriceDidChange(value: coin.price, coin: storedCoin)
+            }
+            self.databaseService.updateEntity {
+                storedCoin.price = coin.price
+                storedCoin.imageUrl = coin.imageUrl
+            }
+            self.delegate?.cryptoRepository(didUpdatePrice: coin)
         }
-        if storedCoin.minPrice > coin.price {
-            // update min price
-        }
-        else if storedCoin.maxPrice < coin.price {
-            // update max price
-        }
-        storedCoin.price = coin.price
-        storedCoin.imageUrl = coin.imageUrl
     }
     
     func cryptoAPIDidDisconnect() {
@@ -84,20 +96,38 @@ private extension CryptoRepository {
 extension CryptoRepository {
     
     private func loadCoinsFromDatabase() {
-        coins = databaseService.fetch(CryptoCurrency.self, filter: nil)
+        coins = databaseService.fetch(CryptoCurrencyEntity.self, filter: nil)
     }
     
     private func loadCoinsFromApi() {
-        let entities = cryptoApi.getAllCoins().map { CryptoCurrency(currency: $0) }
+        let entities = self.cryptoApi.getAllCoins().map { CryptoCurrencyEntity(currency: $0) }
         self.coins = entities
-        databaseService.update(entities)
+        self.delegate?.cryptoRepositoryDidReloadCurrencies()
+        
+        DispatchQueue.main.async {
+            self.databaseService.update(entities)
+        }
+    }
+    
+    private func onMinPriceDidChange(value: Double, coin: CryptoCurrencyEntity) {
+        databaseService.updateEntity {
+            coin.minPrice = value
+        }
+        self.delegate?.cryptoRepository(didUpdateMinPrice: coin)
+    }
+    
+    private func onMaxPriceDidChange(value: Double, coin: CryptoCurrencyEntity) {
+        databaseService.updateEntity {
+            coin.maxPrice = value
+        }
+        self.delegate?.cryptoRepository(didUpdateMaxPrice: coin)
     }
 }
 
 // MARK: - Helpers
 extension CryptoRepository {
     
-    private func coin(code: String) -> CryptoCurrency? {
+    private func coin(code: String) -> CryptoCurrencyEntity? {
         return coins.first(where: { $0.code == code })
     }
 }

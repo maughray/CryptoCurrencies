@@ -1,4 +1,5 @@
 PODS:
+  - Kingfisher (7.1.2)
   - PredicateFlow (1.5):
     - PredicateFlow/Basic (= 1.5)
     - Sourcery (~> 1.0.2)
@@ -15,6 +16,7 @@ PODS:
   - SwiftCharts (0.6.5)
 
 DEPENDENCIES:
+  - Kingfisher
   - PredicateFlow
   - RealmSwift
   - Resolver
@@ -23,6 +25,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
     - PredicateFlow
     - Realm
     - RealmSwift
@@ -32,6 +35,7 @@ SPEC REPOS:
     - SwiftCharts
 
 SPEC CHECKSUMS:
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   PredicateFlow: 7aba88c0ec476efa651fbf652b494773856ab9a9
   Realm: fac5ecd031fcb81171627b74944c885662d4b266
   RealmSwift: 9b02d25acb46a14756bde9893abb99e2e3675923
@@ -40,6 +44,6 @@ SPEC CHECKSUMS:
   Sourcery: 70a6048014bd4f37ea80e6bd4354d47bf3b760e1
   SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
 
-PODFILE CHECKSUM: 7f66383e826e8adc5e194634b640472ee787fb8a
+PODFILE CHECKSUM: 026fecab34e503d8237d703b2f62cbbcb4c17383
 
 COCOAPODS: 1.11.2

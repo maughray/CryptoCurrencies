@@ -11,7 +11,7 @@ import SwiftCharts
 class CryptoChartView: UIView {
     
     private var chartView: Chart!
-    private var currency: CryptoCurrency
+    private var currency: Currency
     
     var chartSettings: ChartSettings {
         var chartSettings = ChartSettings()
@@ -45,7 +45,7 @@ class CryptoChartView: UIView {
         return CGRect(x: 0, y: 70, width: containerBounds.size.width, height: containerBounds.size.height - 70)
     }
     
-    init(currency: CryptoCurrency) {
+    init(currency: Currency) {
         self.currency = currency
         super.init(frame: .zero)
         DispatchQueue.main.async {

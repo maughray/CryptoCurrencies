@@ -22,13 +22,14 @@ class CryptoCurrencyCell: UITableViewCell {
     func setup(viewModel: CryptoCurrencyCellViewModel) {
         createSubviews()
         
-        // TODO: set image with kingfisher
-        //coinImageView.image = UIImage(named: viewModel.currency.imageName)
+        coinImageView.setImage(urlString: viewModel.currency.imageUrl)
         coinNameLabel.text = viewModel.currency.name
         coinCodeLabel.text = viewModel.currency.code
         minPriceLabel.attributedText = viewModel.minPriceAttributedString
         maxPriceLabel.attributedText = viewModel.maxPriceAttributedString
         currentPriceLabel.text = viewModel.currentPrice
+        
+
     }
 }
 
@@ -95,10 +96,8 @@ extension CryptoCurrencyCell {
     
     private func setupCurrentPriceLabel() {
         contentView.addSubview(currentPriceLabel)
-        currentPriceLabel.backgroundColor = .red
         currentPriceLabel.layer.cornerRadius = 5
         currentPriceLabel.layer.masksToBounds = true
-        currentPriceLabel.textColor = .white
         
         currentPriceLabel.snp.makeConstraints { make in
             make.right.equalTo(contentView).offset(-15)

@@ -2,23 +2,21 @@
 //  CryptoCurrencyCellViewModel.swift
 //  Crypto Challenge
 //
-//  Created by maughray on 1/15/22.
+//  Created by Victor Morei on 1/15/22.
 //
 
-import Foundation
+import UIKit
 
-struct CryptoCurrencyCellViewModel {
+class CryptoCurrencyCellViewModel {
 
-    private(set) var minPrice: Float
-    private(set) var maxPrice: Float
     private(set) var currency: CryptoCurrency
     
     var minPriceAttributedString: NSAttributedString {
-        return getPriceAttributedString(value: minPrice, prefix: "min:")
+        return getPriceAttributedString(value: currency.minPrice, prefix: "min:")
     }
     
     var maxPriceAttributedString: NSAttributedString {
-        return getPriceAttributedString(value: maxPrice, prefix: "max:")
+        return getPriceAttributedString(value: currency.maxPrice, prefix: "max:")
     }
     
     var currentPrice: String {
@@ -26,14 +24,28 @@ struct CryptoCurrencyCellViewModel {
     }
     
     init(currency: CryptoCurrency) {
-        minPrice = 0
-        maxPrice = 0
         self.currency = currency
-        
-        // TODO: calculate mix & max prices
     }
     
-    private func getPriceAttributedString(value: Float, prefix: String) -> NSAttributedString {
+    // Bindings
+    var onPriceDidChane: ((Double, UIColor) -> Void)?
+    var onMinPriceDidChange: ((Double) -> Void)?
+    
+    func updatePrice(value: Double) {
+        currency.price = value
+        var color = UIColor.clear
+        //if currency.
+    }
+    
+    func updateMinPrice(value: Double) {
+        
+    }
+    
+    func updateMaxPrice(value: Double) {
+        
+    }
+    
+    private func getPriceAttributedString(value: Double, prefix: String) -> NSAttributedString {
         let priceText = "$\(value)"
         let attributed = NSMutableAttributedString(string: "\(prefix) \(priceText)")
         attributed.setFont(.systemFont(ofSize: 10, weight: .light), forText: prefix)

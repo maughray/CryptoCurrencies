@@ -48,8 +48,7 @@ extension CurrencyDetailsViewController {
     }
     
     private func setupImageView() {
-        // TODO: set image with kingfisher
-        //currencyImageView.image = UIImage(named: viewModel.currency.imageName)
+        currencyImageView.setImage(urlString: viewModel.currency.imageUrl)
         view.addSubview(currencyImageView)
         
         currencyImageView.snp.makeConstraints { make in

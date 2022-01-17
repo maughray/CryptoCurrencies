@@ -8,9 +8,9 @@
 import Foundation
 
 class CurrencyDetailsViewModel {
-    var currency: CryptoCurrency
+    var currency: Currency
     
-    init(currency: CryptoCurrency) {
+    init(currency: Currency) {
         self.currency = currency
     }
 }

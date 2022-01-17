@@ -18,11 +18,39 @@ class CryptoCurrenciesViewController: UIViewController {
     override func loadView() {
         super.loadView()
         createSubviews()
+        setupBindings()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
+    }
+}
+
+// MARK: Bindings
+extension CryptoCurrenciesViewController {
+    
+    private func setupBindings() {
+        viewModel.onCurrenciesDidReload = self.onCurrenciesDidReload
+        viewModel.onCurrencyDidUpdatePrice = self.onCurrencyDidUpdatePrice
+        viewModel.onCurrencyDidUpdateMaxPrice = self.onCurrencyDidUpdateMaxPrice
+        viewModel.onCurrencyDidUpdateMinPrice = self.onCurrencyDidUpdateMinPrice
+    }
+    
+    private func onCurrenciesDidReload() {
+        tableView.reloadData()
+    }
+    
+    private func onCurrencyDidUpdatePrice(index: Int, value: Double) {
+        print("\(index) price update: \(value)")
+    }
+    
+    private func onCurrencyDidUpdateMaxPrice(index: Int, value: Double) {
+        print("\(index) max price update: \(value)")
+    }
+    
+    private func onCurrencyDidUpdateMinPrice(index: Int, value: Double) {
+        print("\(index) min price update: \(value)")
     }
 }
 

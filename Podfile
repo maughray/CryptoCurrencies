@@ -6,5 +6,6 @@ target 'Crypto Challenge' do
   pod 'RealmSwift'
   pod "Resolver"
   pod 'SwiftCharts'
+  pod 'Kingfisher'
   
 end

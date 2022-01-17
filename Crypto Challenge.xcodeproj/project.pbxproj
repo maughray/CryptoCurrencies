@@ -15,9 +15,11 @@
 		959F84582791E95A00892B78 /* CryptoAPI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 959F84552791E93C00892B78 /* CryptoAPI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		959F84652791EB4B00892B78 /* CryptoCurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959F84642791EB4B00892B78 /* CryptoCurrenciesViewController.swift */; };
 		959F84682791EC6000892B78 /* CryptoCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959F84672791EC6000892B78 /* CryptoCurrencyCell.swift */; };
+		95DB79A02795B7700025D287 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DB799F2795B7700025D287 /* UIImageView+Extensions.swift */; };
+		95DB79A32795C52C0025D287 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DB79A22795C52C0025D287 /* CryptoCurrency.swift */; };
 		B24505DE2793672B00686D91 /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505DD2793672B00686D91 /* AppDelegate+Injection.swift */; };
 		B24505E22793688C00686D91 /* CryptoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505E12793688C00686D91 /* CryptoRepository.swift */; };
-		B24505E6279369C800686D91 /* CurrencyPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505E5279369C800686D91 /* CurrencyPrice.swift */; };
+		B24505E6279369C800686D91 /* CurrencyPriceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505E5279369C800686D91 /* CurrencyPriceEntity.swift */; };
 		B24505EB2793748700686D91 /* CurrencyDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505EA2793748700686D91 /* CurrencyDetailsViewModel.swift */; };
 		B24505EE279423DB00686D91 /* CryptoChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505ED279423DB00686D91 /* CryptoChartView.swift */; };
 		B24505F1279562AA00686D91 /* CryptoRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505F0279562AA00686D91 /* CryptoRepositoryProtocol.swift */; };
@@ -26,7 +28,7 @@
 		B24505F82795653500686D91 /* Coin+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24505F72795653500686D91 /* Coin+Extensions.swift */; };
 		B2D697B327930AAA00907B28 /* NSMutableAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */; };
 		B2D697BA2793101300907B28 /* CryptoCurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */; };
-		B2D697BE2793104800907B28 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697BD2793104800907B28 /* CryptoCurrency.swift */; };
+		B2D697BE2793104800907B28 /* CryptoCurrencyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697BD2793104800907B28 /* CryptoCurrencyEntity.swift */; };
 		B2D697C02793213F00907B28 /* CryptoCurrencyCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697BF2793213F00907B28 /* CryptoCurrencyCellViewModel.swift */; };
 		B2D697C2279324E000907B28 /* CurrencyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697C1279324E000907B28 /* CurrencyDetailsViewController.swift */; };
 		B2D697C42793256400907B28 /* RealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D697C32793256400907B28 /* RealmDatabase.swift */; };
@@ -57,10 +59,12 @@
 		959F84552791E93C00892B78 /* CryptoAPI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CryptoAPI.xcframework; sourceTree = "<group>"; };
 		959F84642791EB4B00892B78 /* CryptoCurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrenciesViewController.swift; sourceTree = "<group>"; };
 		959F84672791EC6000892B78 /* CryptoCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyCell.swift; sourceTree = "<group>"; };
+		95DB799F2795B7700025D287 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		95DB79A22795C52C0025D287 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
 		A48EC18204572FE4774DFA78 /* Pods_Crypto_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crypto_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24505DD2793672B00686D91 /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
 		B24505E12793688C00686D91 /* CryptoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRepository.swift; sourceTree = "<group>"; };
-		B24505E5279369C800686D91 /* CurrencyPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPrice.swift; sourceTree = "<group>"; };
+		B24505E5279369C800686D91 /* CurrencyPriceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPriceEntity.swift; sourceTree = "<group>"; };
 		B24505EA2793748700686D91 /* CurrencyDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsViewModel.swift; sourceTree = "<group>"; };
 		B24505ED279423DB00686D91 /* CryptoChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoChartView.swift; sourceTree = "<group>"; };
 		B24505F0279562AA00686D91 /* CryptoRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -69,7 +73,7 @@
 		B24505F72795653500686D91 /* Coin+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coin+Extensions.swift"; sourceTree = "<group>"; };
 		B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 		B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoCurrenciesViewModel.swift; path = "Crypto Challenge/Modules/CryptoCurrencies/ViewModel/CryptoCurrenciesViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		B2D697BD2793104800907B28 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
+		B2D697BD2793104800907B28 /* CryptoCurrencyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyEntity.swift; sourceTree = "<group>"; };
 		B2D697BF2793213F00907B28 /* CryptoCurrencyCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyCellViewModel.swift; sourceTree = "<group>"; };
 		B2D697C1279324E000907B28 /* CurrencyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsViewController.swift; sourceTree = "<group>"; };
 		B2D697C32793256400907B28 /* RealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabase.swift; sourceTree = "<group>"; };
@@ -192,22 +196,32 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		95DB79A12795C4FC0025D287 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B2D697BD2793104800907B28 /* CryptoCurrencyEntity.swift */,
+				B24505E5279369C800686D91 /* CurrencyPriceEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		B24505DF2793685A00686D91 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B24505E02793686200686D91 /* CryptoService */,
+				B24505E02793686200686D91 /* Crypto Repository */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		B24505E02793686200686D91 /* CryptoService */ = {
+		B24505E02793686200686D91 /* Crypto Repository */ = {
 			isa = PBXGroup;
 			children = (
 				B24505E12793688C00686D91 /* CryptoRepository.swift */,
 				B24505EF279562A000686D91 /* Protocols */,
 				B24505F62795652700686D91 /* Extensions */,
+				95DB79A12795C4FC0025D287 /* Entities */,
 			);
-			path = CryptoService;
+			path = "Crypto Repository";
 			sourceTree = "<group>";
 		};
 		B24505EC279423C400686D91 /* Subviews */ = {
@@ -249,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */,
+				95DB799F2795B7700025D287 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -308,8 +323,7 @@
 		B2D697BC2793103700907B28 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B2D697BD2793104800907B28 /* CryptoCurrency.swift */,
-				B24505E5279369C800686D91 /* CurrencyPrice.swift */,
+				95DB79A22795C52C0025D287 /* CryptoCurrency.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -475,7 +489,7 @@
 			files = (
 				B24505F5279564E000686D91 /* Currency.swift in Sources */,
 				B2D697BA2793101300907B28 /* CryptoCurrenciesViewModel.swift in Sources */,
-				B2D697BE2793104800907B28 /* CryptoCurrency.swift in Sources */,
+				B2D697BE2793104800907B28 /* CryptoCurrencyEntity.swift in Sources */,
 				959F84652791EB4B00892B78 /* CryptoCurrenciesViewController.swift in Sources */,
 				B2D697C02793213F00907B28 /* CryptoCurrencyCellViewModel.swift in Sources */,
 				959F84682791EC6000892B78 /* CryptoCurrencyCell.swift in Sources */,
@@ -483,9 +497,11 @@
 				B24505F3279562BE00686D91 /* CryptoRespotoryDelegate.swift in Sources */,
 				B24505F1279562AA00686D91 /* CryptoRepositoryProtocol.swift in Sources */,
 				B24505DE2793672B00686D91 /* AppDelegate+Injection.swift in Sources */,
+				95DB79A32795C52C0025D287 /* CryptoCurrency.swift in Sources */,
+				95DB79A02795B7700025D287 /* UIImageView+Extensions.swift in Sources */,
 				B24505E22793688C00686D91 /* CryptoRepository.swift in Sources */,
 				B24505EB2793748700686D91 /* CurrencyDetailsViewModel.swift in Sources */,
-				B24505E6279369C800686D91 /* CurrencyPrice.swift in Sources */,
+				B24505E6279369C800686D91 /* CurrencyPriceEntity.swift in Sources */,
 				B2D697C42793256400907B28 /* RealmDatabase.swift in Sources */,
 				B2D697C7279325FE00907B28 /* DatabaseService.swift in Sources */,
 				B2D697B327930AAA00907B28 /* NSMutableAttributedString+Extensions.swift in Sources */,
@@ -631,8 +647,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = STSV63264Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Crypto Challenge/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -640,6 +658,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -648,6 +667,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maughray.mantis.cryptochallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -660,8 +680,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = STSV63264Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Crypto Challenge/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -669,6 +691,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -677,6 +700,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maughray.mantis.cryptochallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
