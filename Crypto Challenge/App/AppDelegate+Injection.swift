@@ -11,7 +11,8 @@ import Resolver
 extension Resolver: ResolverRegistering {
     
     public static func registerAllServices() {
-        register { RealmDatabase() }.implements(DatabaseService.self).scope(.application)
-        register { MockCryptoServie() }.implements(CryptoService.self).scope(.application)
+        let databaseService = RealmDatabase()
+        let cryptoRep = CryptoRepository(databaseService: databaseService)
+        register { cryptoRep }.implements(CryptoRepositoryProtocol.self).scope(.application)
     }
 }

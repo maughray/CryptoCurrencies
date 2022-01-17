@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class CurrencyPrice: Object {
+    @objc dynamic var currencyCode: String = ""
     @objc dynamic var timestamp: Int64 = 0
-    @objc dynamic var price: Float = 0
+    @objc dynamic var price: Double = 0
 }

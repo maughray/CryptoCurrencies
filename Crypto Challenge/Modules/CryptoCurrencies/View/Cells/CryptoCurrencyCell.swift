@@ -22,7 +22,8 @@ class CryptoCurrencyCell: UITableViewCell {
     func setup(viewModel: CryptoCurrencyCellViewModel) {
         createSubviews()
         
-        coinImageView.image = UIImage(named: viewModel.currency.imageName)
+        // TODO: set image with kingfisher
+        //coinImageView.image = UIImage(named: viewModel.currency.imageName)
         coinNameLabel.text = viewModel.currency.name
         coinCodeLabel.text = viewModel.currency.code
         minPriceLabel.attributedText = viewModel.minPriceAttributedString

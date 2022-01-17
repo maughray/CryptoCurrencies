@@ -11,7 +11,6 @@ final class RealmDatabase: DatabaseService {
         
     init() {
         initializeDatabase()
-        populateDatabase()
     }
     
     private func initializeDatabase() {
@@ -21,19 +20,6 @@ final class RealmDatabase: DatabaseService {
         
         Realm.Configuration.defaultConfiguration = config
         realm = try? Realm()
-    }
-    
-    private func populateDatabase() {
-        let defaultRealmPath = Realm.Configuration.defaultConfiguration.fileURL!
-        let bundleRealmPath = Bundle.main.url(forResource: "default", withExtension: "realm")
-        
-        if !FileManager.default.fileExists(atPath: defaultRealmPath.absoluteString) {
-            do {
-                try FileManager.default.copyItem(at: bundleRealmPath!, to: defaultRealmPath)
-            } catch {
-                // fatalError("Failed to populate database")
-            }
-        }
     }
     
     func fetch<T: Object>(_ type: T.Type, filter: NSPredicate?) -> [T] {

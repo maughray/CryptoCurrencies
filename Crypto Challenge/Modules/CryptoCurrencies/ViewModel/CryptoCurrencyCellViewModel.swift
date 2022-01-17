@@ -22,7 +22,7 @@ struct CryptoCurrencyCellViewModel {
     }
     
     var currentPrice: String {
-        return " $\(currency.currentPrice) "
+        return " $\(currency.price) "
     }
     
     init(currency: CryptoCurrency) {
