@@ -12,8 +12,8 @@ class CryptoCurrenciesViewController: UIViewController {
     
     private lazy var viewModel = CryptoCurrenciesViewModel()
 
-    private lazy var tableView = UITableView()
-    private lazy var titleLabel = UILabel()
+    private let tableView = UITableView()
+    private let titleLabel = UILabel()
     
     override func loadView() {
         super.loadView()

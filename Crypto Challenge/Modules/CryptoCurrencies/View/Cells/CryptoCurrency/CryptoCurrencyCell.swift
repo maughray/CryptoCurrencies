@@ -12,12 +12,12 @@ class CryptoCurrencyCell: UITableViewCell {
     
     static let identifier = String(describing: CryptoCurrencyCell.self)
 
-    private lazy var coinImageView = UIImageView()
-    private lazy var coinNameLabel = UILabel()
-    private lazy var coinCodeLabel = UILabel()
-    private lazy var minPriceLabel = UILabel()
-    private lazy var maxPriceLabel = UILabel()
-    private lazy var currentPriceLabel = UILabel()
+    private let coinImageView = UIImageView()
+    private let coinNameLabel = UILabel()
+    private let coinCodeLabel = UILabel()
+    private let minPriceLabel = UILabel()
+    private let maxPriceLabel = UILabel()
+    private let currentPriceLabel = UILabel()
     
     private var viewModel: CryptoCurrencyCellViewModel!
     

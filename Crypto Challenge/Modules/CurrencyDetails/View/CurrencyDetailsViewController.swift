@@ -13,9 +13,9 @@ class CurrencyDetailsViewController: UIViewController {
     
     private var viewModel: CurrencyDetailsViewModel
     
-    private lazy var titleLabel = UILabel()
-    private lazy var currencyImageView = UIImageView()
-    private var chartView: CryptoChartView!
+    private let titleLabel = UILabel()
+    private let currencyImageView = UIImageView()
+    private var chartView: CryptoChartView?
     
     init(viewModel: CurrencyDetailsViewModel) {
         self.viewModel = viewModel
@@ -72,9 +72,9 @@ extension CurrencyDetailsViewController {
     
     private func setupChartView() {
         chartView = CryptoChartView(currency: viewModel.currency)
-        view.addSubview(chartView)
+        view.addSubview(chartView!)
         
-        chartView.snp.makeConstraints { make in
+        chartView?.snp.makeConstraints { make in
             make.top.equalTo(currencyImageView.snp.bottom).offset(10)
             make.left.equalTo(view.safeAreaLayoutGuide).offset(10)
             make.right.equalTo(view.safeAreaLayoutGuide).offset(10)
