@@ -31,6 +31,10 @@ class CryptoCurrencyCellViewModel {
     var onPriceDidChane: ((UIColor) -> Void)?
     var onMinPriceDidChange: (() -> Void)?
     var onMaxPriceDidChange: (() -> Void)?
+}
+
+// MARK: - Price updates
+extension CryptoCurrencyCellViewModel {
     
     func updatePrice(value: Double) {
         var color = UIColor.clear
@@ -52,8 +56,12 @@ class CryptoCurrencyCellViewModel {
         currency.maxPrice = value
         onMaxPriceDidChange?()
     }
+}
+
+// MARK: - Helpers
+private extension CryptoCurrencyCellViewModel {
     
-    private func getPriceAttributedString(value: String, prefix: String) -> NSAttributedString {
+    func getPriceAttributedString(value: String, prefix: String) -> NSAttributedString {
         let priceText = "$\(value)"
         let attributed = NSMutableAttributedString(string: "\(prefix) \(priceText)")
         attributed.setFont(.systemFont(ofSize: 10, weight: .light), forText: prefix)
@@ -63,5 +71,3 @@ class CryptoCurrencyCellViewModel {
         return attributed
     }
 }
-
-

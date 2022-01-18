@@ -13,6 +13,8 @@ extension Resolver: ResolverRegistering {
     public static func registerAllServices() {
         let databaseService = RealmDatabase()
         let cryptoRep = CryptoRepository(databaseService: databaseService)
+        
         register { cryptoRep }.implements(CryptoRepositoryProtocol.self).scope(.application)
+        register { databaseService }.implements(DatabaseService.self).scope(.application)
     }
 }

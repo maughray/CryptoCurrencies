@@ -11,7 +11,7 @@ import SnapKit
 class CryptoCurrenciesViewController: UIViewController {
     
     private lazy var viewModel = CryptoCurrenciesViewModel()
-    
+
     private lazy var tableView = UITableView()
     private lazy var titleLabel = UILabel()
     
@@ -89,7 +89,6 @@ extension CryptoCurrenciesViewController: UITableViewDataSource {
         
         let cellViewModel = viewModel.currencyCellsViewModels[indexPath.row]
         cell?.setup(viewModel: cellViewModel)
-        print("setup cell: \(cellViewModel.currency.name)")
         return cell ?? UITableViewCell()
     }
 }

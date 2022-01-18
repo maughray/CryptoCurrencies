@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		085562FCB6122847F1B55136 /* Pods_Crypto_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48EC18204572FE4774DFA78 /* Pods_Crypto_Challenge.framework */; };
-		9518ECF02795D3F10060D24B /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518ECEF2795D3F10060D24B /* Date+Extensions.swift */; };
 		9518ECF4279618550060D24B /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518ECF3279618550060D24B /* Double+Extensions.swift */; };
 		959F84412791E80500892B78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959F84402791E80500892B78 /* AppDelegate.swift */; };
 		959F844A2791E80600892B78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959F84492791E80600892B78 /* Assets.xcassets */; };
@@ -52,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		0A235C1BC4D3121CE5A72079 /* Pods-Crypto Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypto Challenge.release.xcconfig"; path = "Target Support Files/Pods-Crypto Challenge/Pods-Crypto Challenge.release.xcconfig"; sourceTree = "<group>"; };
-		9518ECEF2795D3F10060D24B /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		9518ECF3279618550060D24B /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		959F843D2791E80500892B78 /* Crypto Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		959F84402791E80500892B78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +101,15 @@
 				B2D697C5279325F100907B28 /* Protocols */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		9518ECFE2797375A0060D24B /* CryptoCurrency */ = {
+			isa = PBXGroup;
+			children = (
+				959F84672791EC6000892B78 /* CryptoCurrencyCell.swift */,
+				B2D697BF2793213F00907B28 /* CryptoCurrencyCellViewModel.swift */,
+			);
+			path = CryptoCurrency;
 			sourceTree = "<group>";
 		};
 		959F84342791E80500892B78 = {
@@ -202,7 +209,7 @@
 		959F84662791EC3F00892B78 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				959F84672791EC6000892B78 /* CryptoCurrencyCell.swift */,
+				9518ECFE2797375A0060D24B /* CryptoCurrency */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -265,7 +272,6 @@
 			children = (
 				B2D697B227930AAA00907B28 /* NSMutableAttributedString+Extensions.swift */,
 				95DB799F2795B7700025D287 /* UIImageView+Extensions.swift */,
-				9518ECEF2795D3F10060D24B /* Date+Extensions.swift */,
 				9518ECF3279618550060D24B /* Double+Extensions.swift */,
 			);
 			path = Extensions;
@@ -318,7 +324,6 @@
 			isa = PBXGroup;
 			children = (
 				B2D697B92793101300907B28 /* CryptoCurrenciesViewModel.swift */,
-				B2D697BF2793213F00907B28 /* CryptoCurrencyCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -492,7 +497,6 @@
 			files = (
 				B24505F5279564E000686D91 /* Currency.swift in Sources */,
 				B2D697BA2793101300907B28 /* CryptoCurrenciesViewModel.swift in Sources */,
-				9518ECF02795D3F10060D24B /* Date+Extensions.swift in Sources */,
 				959F84652791EB4B00892B78 /* CryptoCurrenciesViewController.swift in Sources */,
 				B2D697C02793213F00907B28 /* CryptoCurrencyCellViewModel.swift in Sources */,
 				959F84682791EC6000892B78 /* CryptoCurrencyCell.swift in Sources */,

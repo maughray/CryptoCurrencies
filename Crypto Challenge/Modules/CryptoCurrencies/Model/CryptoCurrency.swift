@@ -25,7 +25,13 @@ struct CryptoCurrency: Currency {
         self.minPrice = currency.minPrice
     }
     
-    init(name: String, code: String, price: Double, imageUrl: String? = nil, maxPrice: Double, minPrice: Double) {
+    init(name: String,
+         code: String,
+         price: Double,
+         imageUrl: String? = nil,
+         maxPrice: Double,
+         minPrice: Double)
+    {
         self.name = name
         self.code = code
         self.price = price

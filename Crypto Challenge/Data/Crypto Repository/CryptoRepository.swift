@@ -2,7 +2,7 @@
 //  MockCryptoService.swift
 //  Crypto Challenge
 //
-//  Created by maughray on 1/15/22.
+//  Created by Victor Morei on 1/15/22.
 //
 
 import UIKit
@@ -14,7 +14,6 @@ class CryptoRepository: CryptoRepositoryProtocol {
     private var databaseService: DatabaseService
     weak var delegate: CryptoRepositoryDelegate?
     private lazy var cryptoApi = Crypto(delegate: self)
-    
     private(set) lazy var coins = [CryptoCurrency]()
     
     init(databaseService: DatabaseService) {
@@ -85,7 +84,8 @@ private extension CryptoRepository {
     }
     
     @objc func applicationWillEnterFroreground() {
-        let _ = cryptoApi.connect()
+        let result = cryptoApi.connect()
+        handleConnectionResult(result: result)
     }
 }
 
@@ -107,7 +107,7 @@ extension CryptoRepository {
             
             let entity = CurrencyPriceEntity()
             entity.currencyCode = coinCode
-            entity.timestamp = Date().millisecondsSince1970
+            entity.timestamp = Int64(Date().timeIntervalSince1970)
             entity.price = price
             self.databaseService.add([entity])
         }
@@ -166,7 +166,7 @@ private extension CryptoRepository {
     }
 }
 
-// MARK: - Helper CryptoCurrency initializer
+// MARK: - Helper: CryptoCurrency initializer
 private extension CryptoCurrency {
     
     init(coin: Coin, minPrice: Double?, maxPrice: Double?) {
