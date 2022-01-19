@@ -5,7 +5,7 @@ target 'Crypto Challenge' do
   pod 'PredicateFlow'
   pod 'RealmSwift'
   pod "Resolver"
-  pod 'SwiftCharts'
+  pod 'Charts'
   pod 'Kingfisher'
   
 end

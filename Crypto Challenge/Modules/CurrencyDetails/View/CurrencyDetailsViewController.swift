@@ -2,12 +2,11 @@
 //  CurrencyDetailsViewController.swift
 //  Crypto Challenge
 //
-//  Created by maughray on 1/15/22.
+//  Created by Victor Morei on 1/15/22.
 //
 
 import UIKit
 import SnapKit
-import SwiftCharts
 
 class CurrencyDetailsViewController: UIViewController {
     
@@ -71,7 +70,7 @@ extension CurrencyDetailsViewController {
     }
     
     private func setupChartView() {
-        chartView = CryptoChartView(currency: viewModel.currency)
+        chartView = CryptoChartView(viewModel: viewModel.chartViewModel)
         view.addSubview(chartView!)
         
         chartView?.snp.makeConstraints { make in

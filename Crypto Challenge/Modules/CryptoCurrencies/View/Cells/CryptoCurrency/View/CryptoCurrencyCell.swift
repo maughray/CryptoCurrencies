@@ -12,6 +12,8 @@ class CryptoCurrencyCell: UITableViewCell {
     
     static let identifier = String(describing: CryptoCurrencyCell.self)
 
+    private var viewModel: CryptoCurrencyCellViewModel!
+    
     private let coinImageView = UIImageView()
     private let coinNameLabel = UILabel()
     private let coinCodeLabel = UILabel()
@@ -19,19 +21,10 @@ class CryptoCurrencyCell: UITableViewCell {
     private let maxPriceLabel = UILabel()
     private let currentPriceLabel = UILabel()
     
-    private var viewModel: CryptoCurrencyCellViewModel!
-    
     func setup(viewModel: CryptoCurrencyCellViewModel) {
         self.viewModel = viewModel
         createSubviews()
         setupBindings()
-        
-        coinImageView.setImage(urlString: viewModel.currency.imageUrl)
-        coinNameLabel.text = viewModel.currency.name
-        coinCodeLabel.text = viewModel.currency.code
-        minPriceLabel.attributedText = viewModel.minPriceAttributedString
-        maxPriceLabel.attributedText = viewModel.maxPriceAttributedString
-        currentPriceLabel.text = viewModel.currentPrice
     }
 }
 
@@ -67,7 +60,7 @@ extension CryptoCurrencyCell {
     }
 }
 
-// MARK: - Setup UI
+// MARK: - Create subviews
 extension CryptoCurrencyCell {
     
     private func createSubviews() {
@@ -81,6 +74,8 @@ extension CryptoCurrencyCell {
     
     private func setupCoinImageView() {
         contentView.addSubview(coinImageView)
+        coinImageView.setImage(urlString: viewModel.currency.imageUrl)
+        
         coinImageView.snp.makeConstraints { make in
             make.left.equalTo(contentView).offset(15)
             make.top.equalTo(contentView).offset(10)
@@ -92,6 +87,7 @@ extension CryptoCurrencyCell {
     
     private func setupCoinNameLabel() {
         contentView.addSubview(coinNameLabel)
+        coinNameLabel.text = viewModel.currency.name
         
         coinNameLabel.snp.makeConstraints { make in
             make.left.equalTo(coinImageView.snp.right).offset(10)
@@ -100,6 +96,7 @@ extension CryptoCurrencyCell {
     }
     
     private func setupCoinCodeLabel() {
+        coinCodeLabel.text = viewModel.currency.code
         coinCodeLabel.textColor = .lightGray
         coinCodeLabel.font = .systemFont(ofSize: 16, weight: .light)
         contentView.addSubview(coinCodeLabel)
@@ -111,6 +108,7 @@ extension CryptoCurrencyCell {
     }
     
     private func setupMinPriceLabel() {
+        minPriceLabel.attributedText = viewModel.minPriceAttributedString
         contentView.addSubview(minPriceLabel)
         
         minPriceLabel.snp.makeConstraints { make in
@@ -120,7 +118,9 @@ extension CryptoCurrencyCell {
     }
     
     private func setupMaxPriceLabel() {
+        maxPriceLabel.attributedText = viewModel.maxPriceAttributedString
         contentView.addSubview(maxPriceLabel)
+        
         maxPriceLabel.snp.makeConstraints { make in
             make.left.equalTo(minPriceLabel.snp.right).offset(15)
             make.centerY.equalTo(minPriceLabel)
@@ -128,6 +128,7 @@ extension CryptoCurrencyCell {
     }
     
     private func setupCurrentPriceLabel() {
+        currentPriceLabel.text = viewModel.currentPrice
         contentView.addSubview(currentPriceLabel)
         currentPriceLabel.layer.cornerRadius = 5
         currentPriceLabel.layer.masksToBounds = true

@@ -8,9 +8,12 @@
 import Foundation
 
 class CurrencyDetailsViewModel {
-    var currency: Currency
+    
+    private(set) var currency: Currency
+    private(set) var chartViewModel: CryptoChartViewModel
     
     init(currency: Currency) {
         self.currency = currency
+        chartViewModel = CryptoChartViewModel(currency: currency)
     }
 }

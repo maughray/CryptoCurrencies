@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		085562FCB6122847F1B55136 /* Pods_Crypto_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48EC18204572FE4774DFA78 /* Pods_Crypto_Challenge.framework */; };
 		9518ECF4279618550060D24B /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518ECF3279618550060D24B /* Double+Extensions.swift */; };
+		9518ED03279807360060D24B /* CryptoChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518ED02279807360060D24B /* CryptoChartViewModel.swift */; };
+		9518ED0B279859CF0060D24B /* CryptoChartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518ED0A279859CF0060D24B /* CryptoChartPoint.swift */; };
+		9518ED0D27985A930060D24B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518ED0C27985A930060D24B /* Constants.swift */; };
 		959F84412791E80500892B78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959F84402791E80500892B78 /* AppDelegate.swift */; };
 		959F844A2791E80600892B78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959F84492791E80600892B78 /* Assets.xcassets */; };
 		959F844D2791E80600892B78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959F844B2791E80600892B78 /* LaunchScreen.storyboard */; };
@@ -52,6 +55,9 @@
 /* Begin PBXFileReference section */
 		0A235C1BC4D3121CE5A72079 /* Pods-Crypto Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypto Challenge.release.xcconfig"; path = "Target Support Files/Pods-Crypto Challenge/Pods-Crypto Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		9518ECF3279618550060D24B /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		9518ED02279807360060D24B /* CryptoChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoChartViewModel.swift; sourceTree = "<group>"; };
+		9518ED0A279859CF0060D24B /* CryptoChartPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoChartPoint.swift; sourceTree = "<group>"; };
+		9518ED0C27985A930060D24B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		959F843D2791E80500892B78 /* Crypto Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		959F84402791E80500892B78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959F84492791E80600892B78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,10 +112,68 @@
 		9518ECFE2797375A0060D24B /* CryptoCurrency */ = {
 			isa = PBXGroup;
 			children = (
-				959F84672791EC6000892B78 /* CryptoCurrencyCell.swift */,
-				B2D697BF2793213F00907B28 /* CryptoCurrencyCellViewModel.swift */,
+				9518ED0027973F300060D24B /* View */,
+				9518ED0127973F330060D24B /* ViewModel */,
 			);
 			path = CryptoCurrency;
+			sourceTree = "<group>";
+		};
+		9518ECFF27973F110060D24B /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				959F84642791EB4B00892B78 /* CryptoCurrenciesViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		9518ED0027973F300060D24B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				959F84672791EC6000892B78 /* CryptoCurrencyCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9518ED0127973F330060D24B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B2D697BF2793213F00907B28 /* CryptoCurrencyCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9518ED04279810720060D24B /* CryptoChart */ = {
+			isa = PBXGroup;
+			children = (
+				9518ED05279810800060D24B /* Model */,
+				9518ED06279810840060D24B /* View */,
+				9518ED07279810880060D24B /* ViewModel */,
+			);
+			path = CryptoChart;
+			sourceTree = "<group>";
+		};
+		9518ED05279810800060D24B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9518ED0A279859CF0060D24B /* CryptoChartPoint.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9518ED06279810840060D24B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B24505ED279423DB00686D91 /* CryptoChartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9518ED07279810880060D24B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9518ED02279807360060D24B /* CryptoChartViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		959F84342791E80500892B78 = {
@@ -156,6 +220,7 @@
 			children = (
 				959F84402791E80500892B78 /* AppDelegate.swift */,
 				B24505DD2793672B00686D91 /* AppDelegate+Injection.swift */,
+				9518ED0C27985A930060D24B /* Constants.swift */,
 				959F844E2791E80600892B78 /* Info.plist */,
 			);
 			path = App;
@@ -192,7 +257,7 @@
 		959F845F2791EAD300892B78 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				959F84642791EB4B00892B78 /* CryptoCurrenciesViewController.swift */,
+				9518ECFF27973F110060D24B /* View Controller */,
 				959F84662791EC3F00892B78 /* Cells */,
 			);
 			path = View;
@@ -243,7 +308,7 @@
 		B24505EC279423C400686D91 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				B24505ED279423DB00686D91 /* CryptoChartView.swift */,
+				9518ED04279810720060D24B /* CryptoChart */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -495,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9518ED03279807360060D24B /* CryptoChartViewModel.swift in Sources */,
 				B24505F5279564E000686D91 /* Currency.swift in Sources */,
 				B2D697BA2793101300907B28 /* CryptoCurrenciesViewModel.swift in Sources */,
 				959F84652791EB4B00892B78 /* CryptoCurrenciesViewController.swift in Sources */,
@@ -511,11 +577,13 @@
 				B2D697C42793256400907B28 /* RealmDatabase.swift in Sources */,
 				B2D697C7279325FE00907B28 /* DatabaseService.swift in Sources */,
 				B2D697B327930AAA00907B28 /* NSMutableAttributedString+Extensions.swift in Sources */,
+				9518ED0B279859CF0060D24B /* CryptoChartPoint.swift in Sources */,
 				B2D697C2279324E000907B28 /* CurrencyDetailsViewController.swift in Sources */,
 				B24505EE279423DB00686D91 /* CryptoChartView.swift in Sources */,
 				95DB79A92795D00E0025D287 /* PredicateFlow.generated.swift in Sources */,
 				9518ECF4279618550060D24B /* Double+Extensions.swift in Sources */,
 				959F84412791E80500892B78 /* AppDelegate.swift in Sources */,
+				9518ED0D27985A930060D24B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +741,38 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Charts\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"PredicateFlow\"",
+					"-framework",
+					"\"Realm\"",
+					"-framework",
+					"\"RealmSwift\"",
+					"-framework",
+					"\"Resolver\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"Combine\"",
+					"-weak_framework",
+					"\"SwiftUI\"",
+					"-w",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maughray.mantis.cryptochallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -706,6 +806,38 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Charts\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"PredicateFlow\"",
+					"-framework",
+					"\"Realm\"",
+					"-framework",
+					"\"RealmSwift\"",
+					"-framework",
+					"\"Resolver\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"Combine\"",
+					"-weak_framework",
+					"\"SwiftUI\"",
+					"-w",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maughray.mantis.cryptochallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

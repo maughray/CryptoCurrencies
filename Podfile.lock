@@ -1,4 +1,7 @@
 PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - Kingfisher (7.1.2)
   - PredicateFlow (1.5):
     - PredicateFlow/Basic (= 1.5)
@@ -13,18 +16,18 @@ PODS:
   - Resolver (1.5.0)
   - SnapKit (5.0.1)
   - Sourcery (1.0.3)
-  - SwiftCharts (0.6.5)
 
 DEPENDENCIES:
+  - Charts
   - Kingfisher
   - PredicateFlow
   - RealmSwift
   - Resolver
   - SnapKit (~> 5.0.0)
-  - SwiftCharts
 
 SPEC REPOS:
   trunk:
+    - Charts
     - Kingfisher
     - PredicateFlow
     - Realm
@@ -32,9 +35,9 @@ SPEC REPOS:
     - Resolver
     - SnapKit
     - Sourcery
-    - SwiftCharts
 
 SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   PredicateFlow: 7aba88c0ec476efa651fbf652b494773856ab9a9
   Realm: fac5ecd031fcb81171627b74944c885662d4b266
@@ -42,8 +45,7 @@ SPEC CHECKSUMS:
   Resolver: 68984624572763018fd8ec7b8e3e8df0e3b6bba5
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Sourcery: 70a6048014bd4f37ea80e6bd4354d47bf3b760e1
-  SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
 
-PODFILE CHECKSUM: 026fecab34e503d8237d703b2f62cbbcb4c17383
+PODFILE CHECKSUM: e9567bf893a6e871295682b931c920fe7ca1e01c
 
 COCOAPODS: 1.11.2
