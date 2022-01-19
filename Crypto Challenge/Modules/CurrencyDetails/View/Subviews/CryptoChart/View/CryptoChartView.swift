@@ -60,7 +60,6 @@ extension CryptoChartView {
     
     func configureChart() {
         chartView.leftAxis.axisMinimum = viewModel.minPriceAxisValue
-        chartView.animate(yAxisDuration: 1.0)
         chartView.legend.enabled = false
         chartView.rightAxis.enabled = false
         chartView.leftAxis.labelTextColor = .gray
